@@ -1,0 +1,38 @@
+Arguments: 
+  /Users/anthonyzamarro/.nvm/versions/node/v20.17.0/bin/node /usr/local/Cellar/yarn/1.22.19/libexec/bin/yarn.js add express
+
+PATH: 
+  /Users/anthonyzamarro/.nvm/versions/node/v20.17.0/bin:/Users/anthonyzamarro/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/ImageMagick/bin:/Applications/DevDesktop/tools:/Users/anthonyzamarro/.rvm/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.17.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/express: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:141550:19)
+      at listOnTimeout (node:internal/timers:581:17)
+      at process.processTimers (node:internal/timers:519:7)
+
+npm manifest: 
+  {
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "backend for home inventory",
+    "main": "index.js",
+    "repository": "https://github.com/anthonyzamarro/home",
+    "author": "azam",
+    "license": "MIT",
+    "private": false
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
