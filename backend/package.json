@@ -1,0 +1,10 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend for home inventory",
+  "main": "index.js",
+  "repository": "https://github.com/anthonyzamarro/home",
+  "author": "azam",
+  "license": "MIT",
+  "private": false
+}
