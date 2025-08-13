@@ -7,6 +7,10 @@
   "author": "azam",
   "license": "MIT",
   "private": false,
+  "main": "dist/index.js",
+  "scripts": {
+	  "build": "tsc --build"
+  },
   "dependencies": {
     "@apollo/server": "^5.0.0"
   }
