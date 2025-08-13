@@ -2,9 +2,26 @@
   "name": "home",
   "version": "1.0.0",
   "description": "home inventory app to help users prevent waste",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://github.com/anthonyzamarro/home.git",
   "author": "Anthony <anthony.zamarro@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --build",
+    "compile": "tsc",
+    "start": "yarn run compile && node ./dist/index.js"
+  },
+  "dependencies": {
+    "graphql": "^16.11.0",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "ts-node": "^10.9.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

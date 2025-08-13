@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "compilerOptions": true,
+    "declaration": true,
+    "declarationMap": true,
+    "incremental": true,
+    "lib": ["es2023"],
+    "target": "es2023",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "types": ["node"],
+    "references" : [
+	    {"path": "./frontend"},
+	    {"path": "./backend"}
+    ],
+    "exclude": ["node_modules"]
+  }
+}
