@@ -9,7 +9,9 @@
   "private": false,
   "main": "dist/index.js",
   "scripts": {
-	  "build": "tsc --build"
+  	  "start": "yarn run compile && node ./dist/index.js",
+	  "build": "tsc --build",
+	  "compile": "tsc"
   },
   "dependencies": {
     "@apollo/server": "^5.0.0"
