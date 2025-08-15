@@ -1,4 +1,7 @@
 
+import { ApolloServer } from '@apollo/server'
+import { startStandaloneServer } from '@apollo/server/standalone'
+
 export const typeDefs = `#graphql
 
 type FoodItem {
@@ -15,7 +18,7 @@ type Query {
 `
 
 interface FoodItem {
-	id: string
+	id: number
 	name: string
 	quantity: number
 	dateBought: string
@@ -49,6 +52,6 @@ const foodItems: FoodItem[]  = [
 
 export const resolvers = {
 Query: {
-	foodItems, FoodItems
+	foodItems: () => foodItems
        }
 }
