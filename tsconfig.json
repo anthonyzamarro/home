@@ -15,6 +15,7 @@
     "allowSyntheticDefaultImports": true
   },
     "references" : [
+	    {"path": "./frontend"},
 	    {"path": "./backend"}
     ],
     "exclude": ["**/node_modules", "**/dist"]
