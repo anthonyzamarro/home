@@ -14,9 +14,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".",
-    "rootDir": "src",
-    "outDir": "dist",
     "composite": true,
     "plugins": [
       {
