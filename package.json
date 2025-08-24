@@ -11,7 +11,9 @@
   "scripts": {
     "build": "tsc --build",
     "compile": "tsc",
-    "start": "yarn run compile && node ./dist/index.js"
+    "start": "yarn run compile && node ./dist/index.js",
+    "start:fe": "yarn workspace frontend dev",
+    "start:be": "yarn workspace backend start"
   },
   "dependencies": {
     "graphql": "^16.11.0"

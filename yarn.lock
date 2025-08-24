@@ -7,6 +7,21 @@
   resolved "https://registry.yarnpkg.com/@apollo/cache-control-types/-/cache-control-types-1.0.3.tgz#5da62cf64c3b4419dabfef4536b57a40c8ff0b47"
   integrity sha512-F17/vCp7QVwom9eG7ToauIKdAxpSoadsJnqIfyryLFSkLSOEqu+eC5Z3N8OXcUVStuOMcNHlyraRsA6rRICu4g==
 
+"@apollo/client-integration-nextjs@^0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@apollo/client-integration-nextjs/-/client-integration-nextjs-0.13.0.tgz#09a5035439da8f46be8a2686eea642c374cb0315"
+  integrity sha512-y2WcATEDSvRXD4R3G6UDj9TgD/5/MhgWzZmCWDYjs2qrlSO9kONamWzzELAgU3KBmpLl7xO8wz1n4e1R34CfVQ==
+  dependencies:
+    "@apollo/client-react-streaming" "0.13.0"
+
+"@apollo/client-react-streaming@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@apollo/client-react-streaming/-/client-react-streaming-0.13.0.tgz#abd9bd4d63e2b249317a161fedee31577e54a63a"
+  integrity sha512-a6dDTojTn09Ft5zUAEB3qLszht35W1LNezAT/ktZKSGvIEKjp2uUdnlPF2kaWbqUV6+D5Lz0FGQ89wuZzpBnsw==
+  dependencies:
+    "@types/react-dom" "^19.0.0"
+    "@wry/equality" "^0.5.6"
+
 "@apollo/client@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@apollo/client/-/client-4.0.0.tgz#7a8e9955ee7404fe2ce778a7907492c9b1c2553a"
@@ -678,7 +693,7 @@
   dependencies:
     undici-types "~7.10.0"
 
-"@types/react-dom@^19":
+"@types/react-dom@^19", "@types/react-dom@^19.0.0":
   version "19.1.7"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-19.1.7.tgz#2863f2aa89e023592b981204ef92c5221b286410"
   integrity sha512-i5ZzwYpqjmrKenzkoLM2Ibzt6mAsM7pxB6BCIouEVVmgiqaMj1TjaK7hnA36hbW5aZv20kx7Lw6hWzPWg0Rurw==
