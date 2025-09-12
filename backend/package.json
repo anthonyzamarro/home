@@ -2,19 +2,23 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "backend for home inventory",
-  "main": "index.js",
+  "main": "dist/server.js",
   "repository": "https://github.com/anthonyzamarro/home",
   "author": "azam",
   "license": "MIT",
   "private": false,
   "type": "module",
-  "main": "dist/server.js",
   "scripts": {
-  	  "start": "yarn run compile && node ./dist/server.js",
-	  "build": "tsc -p tsconfig.json",
-	  "compile": "tsc"
+    "start": "yarn run compile && node ./dist/server.js",
+    "build": "tsc -p tsconfig.json",
+    "compile": "tsc"
   },
   "dependencies": {
-    "@apollo/server": "^5.0.0"
+    "@apollo/server": "^5.0.0",
+    "dotenv": "^17.2.2",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.5"
   }
 }
