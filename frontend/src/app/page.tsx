@@ -29,6 +29,7 @@ export default function Home() {
   }
 
   if (error) {
+    console.log({ error })
     return <p>Error</p>
   }
 
