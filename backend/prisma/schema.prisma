@@ -1,0 +1,70 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model app_user {
+  id             Int              @id @default(autoincrement())
+  username       String           @unique @db.VarChar(50)
+  email          String           @unique @db.VarChar(100)
+  password       String?          @db.VarChar(255)
+  cognito_sub    String?          @db.VarChar(255)
+  inventory_list inventory_list[]
+  meal_plan      meal_plan[]
+}
+
+model food_item {
+  id                Int               @id @default(autoincrement())
+  name              String            @db.VarChar(100)
+  quantity          Int               @default(1)
+  date_bought       DateTime?         @db.Date
+  expiration        DateTime?         @db.Date
+  inventory_list_id Int
+  inventory_list    inventory_list    @relation(fields: [inventory_list_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  meal_ingredient   meal_ingredient[]
+}
+
+model inventory_list {
+  id        Int         @id @default(autoincrement())
+  name      String      @db.VarChar(100)
+  user_id   Int
+  food_item food_item[]
+  app_user  app_user    @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+model meal {
+  id              Int               @id @default(autoincrement())
+  name            String            @db.VarChar(100)
+  description     String?
+  portions        Int?
+  link            String?           @db.VarChar(255)
+  calories        Int?
+  protein         Int?
+  fat             Int?
+  carbs           Int?
+  meal_ingredient meal_ingredient[]
+  meal_plan       meal_plan[]
+}
+
+model meal_ingredient {
+  id           Int       @id @default(autoincrement())
+  meal_id      Int
+  food_item_id Int
+  quantity     Int
+  food_item    food_item @relation(fields: [food_item_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  meal         meal      @relation(fields: [meal_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+model meal_plan {
+  id           Int      @id @default(autoincrement())
+  planned_date DateTime @db.Date
+  meal_id      Int
+  user_id      Int
+  meal         meal     @relation(fields: [meal_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  app_user     app_user @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
