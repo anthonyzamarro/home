@@ -12,7 +12,7 @@ const typeDefs = `#graphql
 	}
 `
 
-interface FoodItem {
+export interface FoodItem {
   id: number
   name: string
   quantity: number
