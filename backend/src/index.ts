@@ -10,6 +10,10 @@ const typeDefs = `#graphql
 	type Query {
 		foodItems: [FoodItem]
 	}
+
+	type Mutation {
+		createFoodItem: Boolean
+	}
 `
 
 export interface FoodItem {
